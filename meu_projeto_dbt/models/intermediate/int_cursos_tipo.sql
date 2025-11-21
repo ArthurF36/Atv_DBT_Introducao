@@ -30,13 +30,6 @@ with union_all_years as (
 
     union all
     select
-        2023 as nu_ano_censo,
-        tp_rede,
-        sg_uf
-    from {{ ref('stg_cadastro_cursos_2023') }}
-
-    union all
-    select
         2024 as nu_ano_censo,
         tp_rede,
         sg_uf
