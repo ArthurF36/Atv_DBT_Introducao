@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: int_cadastro_cursos
+    description: >
+      Modelo intermediário que integra dados de diferentes anos do Censo,
+      padronizando UF, categorizando tipo da rede e adicionando o ano do censo.
+      Aqui ocorre a união entre todos os anos disponíveis.
+
+    columns:
+      - name: nu_ano_censo
+        description: "Ano do censo ao qual o registro pertence."
+        tests:
+          - not_null
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa em letras maiúsculas."
+        tests:
+          - not_null
+
+      - name: tp_rede
+        description: "Código do tipo de rede (1 = Pública, 2 = Privada)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: rede_desc
+        description: "Descrição textual do tipo da rede (Pública ou Privada)."
+        tests:
+          - not_null

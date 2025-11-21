@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: stg_cadastro_cursos_2017
+    description: "Staging dos dados de cursos do Censo 2017. Apenas padronização de tipos."
+    columns:
+      - name: tp_rede
+        description: "Tipo da rede de ensino (1 = Pública, 2 = Privada)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa."
+        tests:
+          - not_null
+
+  - name: stg_cadastro_cursos_2018
+    description: "Staging dos dados de cursos do Censo 2018."
+    columns:
+      - name: tp_rede
+        description: "Tipo da rede de ensino."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa."
+        tests:
+          - not_null
+
+  - name: stg_cadastro_cursos_2019
+    description: "Staging dos dados de cursos do Censo 2019."
+    columns:
+      - name: tp_rede
+        description: "Tipo da rede de ensino."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa."
+        tests:
+          - not_null
+
+  - name: stg_cadastro_cursos_2022
+    description: "Staging dos dados de cursos do Censo 2022."
+    columns:
+      - name: tp_rede
+        description: "Tipo da rede de ensino."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa."
+        tests:
+          - not_null
+
+  - name: stg_cadastro_cursos_2023
+    description: "Staging dos dados de cursos do Censo 2023."
+    columns:
+      - name: tp_rede
+        description: "Tipo da rede de ensino."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa."
+        tests:
+          - not_null
+
+  - name: stg_cadastro_cursos_2024
+    description: "Staging dos dados de cursos do Censo 2024."
+    columns:
+      - name: tp_rede
+        description: "Tipo da rede de ensino."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: sg_uf
+        description: "Sigla da unidade federativa."
+        tests:
+          - not_null

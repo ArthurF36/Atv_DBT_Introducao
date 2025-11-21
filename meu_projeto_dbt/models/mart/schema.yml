@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: mart_cadastro_cursos
+    description: >
+      Tabela mart com a contagem total de cursos por ano do censo e tipo de rede.
+      Baseada no modelo intermediário int_cadastro_cursos.
+
+    columns:
+      - name: nu_ano_censo
+        description: "Ano do censo."
+        tests:
+          - not_null
+
+      - name: rede_desc
+        description: "Descrição da rede (Pública ou Privada)."
+        tests:
+          - not_null
+
+      - name: tp_rede
+        description: "Código do tipo da rede (1 = Pública, 2 = Privada)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2]
+
+      - name: total_cursos
+        description: "Quantidade total de cursos naquele ano e rede."
+        tests:
+          - not_null

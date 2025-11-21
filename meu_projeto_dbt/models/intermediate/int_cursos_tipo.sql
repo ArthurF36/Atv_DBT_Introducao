@@ -1,7 +1,6 @@
 {{ config(materialized='view') }}
 
 with union_all_years as (
-
     select
         2017 as nu_ano_censo,
         tp_rede,
